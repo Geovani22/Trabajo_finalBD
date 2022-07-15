@@ -40,7 +40,7 @@
             
             <a href="{{ url('/vuelos/'.$vuelo->id.'/edit') }}">Editar</a>
             
-            <form action="{{ url('/vuelos/'.$vuelo->id) }}" method="post">
+            <form action="{{ url('/vuelos/'.$vuelo->id) }}" class="d-inline " method="post">
                 @csrf
                 {{method_field('DELETE')}}
                 <input type="submit" onclick="return confirm('¿Desea borrar?')" value="Borrar">
